@@ -1,0 +1,11 @@
+<h3 class="text-center">Tarefas</h3>
+
+<div class="container">
+  <app-todo-list [tasks]="tasks"></app-todo-list>
+
+  <div class="btn-group">
+    <button class="btn btn-success" (click)="save()">SALVAR</button>
+    <app-add-todo [tasks]="tasks"></app-add-todo>
+    <button class="btn btn-default" (click)="clear()">LIMPAR CACHE</button>
+  </div>
+</div>

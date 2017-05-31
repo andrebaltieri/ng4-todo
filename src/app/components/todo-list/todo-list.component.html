@@ -1,0 +1,19 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th class="text-center">Tarefa</th>
+      <th class="text-center"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>
+        <span *ngIf="task.done" class="done">{{ task.title }}</span>
+        <span *ngIf="!task.done">{{ task.title }}</span>
+      </td>
+      <td class="text-center">
+        <input type="checkbox" [(ngModel)]="task.done">
+      </td>
+    </tr>
+  </tbody>
+</table>
